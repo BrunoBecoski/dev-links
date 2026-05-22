@@ -14,7 +14,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --text-color: #ffffff;
   --stroke-color: #ffffff80;
-  --surface-color: #ffffffa1;
+  --surface-color: #ffffff1a;
   --surface-hover-color: #ffffff0d;
   --highlight-color: #ffffff33;
 
@@ -22,10 +22,10 @@ html[data-theme="dark"] {
   --bg-mobile-image: url("/bg-mobile-dark.png");
 }
 
-@theme inline {
+@theme {
   --default-font-family: "Inter", sans-serif;
 
-  --text-sm: 16px;
+  --text-sm: 14px;
   --text-sm--line-height: 24px;
   --text-sm--font-weight: 400;
 
@@ -41,4 +41,16 @@ html[data-theme="dark"] {
 
   --background-image-desktop: var(--bg-desktop-image);
   --background-image-mobile: var(--bg-mobile-image);
+
+  --animate-rotate: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
