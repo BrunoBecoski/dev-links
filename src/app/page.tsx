@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 import { Avatar } from "@/components/avatar";
-import { Button } from "@/components/button";
+import { ButtonLink } from "@/components/button-link";
+import { SocialLink } from "@/components/social-link";
 
 export default function Home() {
   return (
@@ -14,10 +15,17 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <Button>Inscreva-se no NLW</Button>
-          <Button>Baixe meu e-book</Button>
-          <Button>Veja meu portfólio</Button>
-          <Button>Conheça meu curso</Button>
+          <ButtonLink href="/nlw">Inscreva-se no NLW</ButtonLink>
+          <ButtonLink href="/ebook">Baixe meu e-book</ButtonLink>
+          <ButtonLink href="/portifolio">Veja meu portfólio</ButtonLink>
+          <ButtonLink href="/curso">Conheça meu curso</ButtonLink>
+        </div>
+
+        <div className="flex justify-center gap-4 my-6">
+          <SocialLink href="/github" icon="github" />
+          <SocialLink href="/instagram" icon="instagram" />
+          <SocialLink href="/youtube" icon="youtube" />
+          <SocialLink href="/linkedin" icon="linkedin" />
         </div>
 
         <span className="text-sm text-text text-center">

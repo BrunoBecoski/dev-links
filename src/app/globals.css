@@ -5,7 +5,7 @@ html[data-theme="light"] {
   --stroke-color: #00000080;
   --surface-color: #0000000d;
   --surface-hover-color: #00000005;
-  --highlight-color: #000000a1;
+  --highlight-color: #0000001a;
 
   --bg-desktop-image: url("/bg-desktop-light.png");
   --bg-mobile-image: url("/bg-mobile-light.png");
