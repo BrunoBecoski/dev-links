@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Avatar } from "@/components/avatar";
 import { ButtonLink } from "@/components/button-link";
 import { SocialLink } from "@/components/social-link";
+import { ToggleTheme } from "@/components/toggle-theme";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
 
           <span className="text-text text-md">@brunobecoski</span>
         </div>
+
+        <ToggleTheme />
 
         <div className="flex flex-col gap-4">
           <ButtonLink href="/nlw">Inscreva-se no NLW</ButtonLink>

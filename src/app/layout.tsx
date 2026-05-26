@@ -20,12 +20,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const injectedCode = `
+    (function() {
+      try {
+        const themeStorage = localStorage.getItem('devlinks:theme');
+        if (themeStorage) {
+          document.documentElement.dataset.theme = themeStorage;
+        } else {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      } catch (e) {
+        console.error('Erro ao ler localStorage no layout:', e);
+      }
+    })();
+  `;
+
   return (
     <html
       lang="pt-BR"
       className={`${interSans.variable} h-full antialiased`}
       data-theme="dark"
+      suppressHydrationWarning
     >
+      <head>
+        {/** biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
+        <script dangerouslySetInnerHTML={{ __html: injectedCode }} />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
