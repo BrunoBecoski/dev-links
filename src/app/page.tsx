@@ -15,7 +15,9 @@ export default function Home() {
           <span className="text-text text-md">@brunobecoski</span>
         </div>
 
-        <ToggleTheme />
+        <div className="flex justify-center mt-">
+          <ToggleTheme />
+        </div>
 
         <div className="flex flex-col gap-4">
           <ButtonLink href="/nlw">Inscreva-se no NLW</ButtonLink>

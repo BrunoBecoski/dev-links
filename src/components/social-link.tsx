@@ -61,7 +61,7 @@ export function SocialLink({ href, icon }: SocialLinkProps) {
     <Link href={href} target="_blank">
       <button
         type="button"
-        className="flex items-center justify-center size-10 fill-text rounded-full hover:cursor-pointer hover:bg-highlight  transition-colors duration-300"
+        className="flex items-center justify-center size-10 fill-text rounded-full hover:cursor-pointer hover:bg-highlight transition-colors duration-300"
       >
         {icons[icon]}
       </button>
