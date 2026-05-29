@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-type IconsProps = "github" | "instagram" | "linkedin" | "youtube";
+export type SocialMedia = "github" | "instagram" | "linkedin" | "youtube";
 
-const icons: Record<IconsProps, React.JSX.Element> = {
+const icons: Record<SocialMedia, React.JSX.Element> = {
   github: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const icons: Record<IconsProps, React.JSX.Element> = {
 
 interface SocialLinkProps {
   href: string;
-  icon: IconsProps;
+  icon: SocialMedia;
 }
 
 export function SocialLink({ href, icon }: SocialLinkProps) {
