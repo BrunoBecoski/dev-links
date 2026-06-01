@@ -1,5 +1,6 @@
 ---
   avatar: "/avatar.png"
+  name: "@brunobecoski"
   links:
     - title: "Inscreva-se no NLW"
       url:  "/url"

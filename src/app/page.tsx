@@ -5,11 +5,12 @@ import fs from "node:fs";
 
 import { Avatar } from "@/components/avatar";
 import { ButtonLink } from "@/components/button-link";
-import { SocialLink, SocialMedia } from "@/components/social-link";
+import { SocialLink, type SocialMedia } from "@/components/social-link";
 import { ToggleTheme } from "@/components/toggle-theme";
 
 type Content = {
   avatar: string;
+  name: string;
   links: {
     title: string;
     url: string;
@@ -34,19 +35,19 @@ export default function Home() {
   const content = getContent();
 
   return (
-    <main className="bg-desktop w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center">
-      <div className="w-lg mt-10 flex flex-col gap-10">
+    <main className="bg-mobile md:bg-desktop w-full  h-full min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center">
+      <div className="w-full md:w-lg my-10 px-6 flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-2">
-          <Avatar alt="brunobecoski" src={content.avatar} />
+          <Avatar alt={content.name} src={content.avatar} />
 
-          <span className="text-text text-md">@brunobecoski</span>
+          <span className="text-text text-md mt-2">{content.name}</span>
         </div>
 
-        <div className="flex justify-center mt-">
+        <div className="flex justify-center">
           <ToggleTheme />
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 w-full">
           {content.links.map((link) => (
             <ButtonLink key={link.url} href={link.url}>
               {link.title}
