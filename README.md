@@ -1,3 +1,5 @@
+DevLinks é um agregador de links responsivos com a troca de tema.
+
 Este é um projeto [Next.js](https://nextjs.org).
 
 ## Para iniciar
