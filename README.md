@@ -16,35 +16,6 @@
 - 🌓 **Tema Claro/Escuro:** Alternância de temas com salvamento automático no `localStorage` para manter a preferência do usuário.
 - 📝 **Conteúdo via Markdown:** Links e informações gerenciados através de arquivos Markdown tratados com `gray-matter`.
 
-## ⚙️ Como Personalizar o Conteúdo
-
-Você pode alterar todas as informações exibidas no app sem mexer no código da aplicação. Basta editar o arquivo `src/app/content.md`:
-
-```yaml
----
-  avatar: "/avatar.png"
-  name: "@brunobecoski"
-  links:
-    - title: "Inscreva-se no NLW"
-      url:  "/url"
-    - title: "Baixe meu e-book"
-      url: "/ebook" 
-    - title: "Veja meu portfólio"
-      url: "/portifolio" 
-    - title: "Conheça meu curso"
-      url: "/curso"
-  socials:
-    - name: "github"
-      url: "/github"
-    - name: "instagram"
-      url: "/instagram" 
-    - name: "youtube"
-      url: "/youtube" 
-    - name: "linkedin"
-      url: "/linkedin" 
----
-```
-
 ## 🛠️ Tecnologias e Ferramentas
 
 - [Next.js 16](https://nextjs.org) - Framework React para alta performance e renderização otimizada
@@ -80,3 +51,32 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
   ```
 
 Acesse http://localhost:3000 no seu navegador para ver a aplicação rodando.
+
+## ⚙️ Como Personalizar o Conteúdo
+
+Você pode alterar todas as informações exibidas no app sem mexer no código da aplicação. Basta editar o arquivo `src/app/content.md`:
+
+```yaml
+---
+  avatar: "/avatar.png"
+  name: "@brunobecoski"
+  links:
+    - title: "Inscreva-se no NLW"
+      url:  "/url"
+    - title: "Baixe meu e-book"
+      url: "/ebook" 
+    - title: "Veja meu portfólio"
+      url: "/portifolio" 
+    - title: "Conheça meu curso"
+      url: "/curso"
+  socials:
+    - name: "github"
+      url: "/github"
+    - name: "instagram"
+      url: "/instagram" 
+    - name: "youtube"
+      url: "/youtube" 
+    - name: "linkedin"
+      url: "/linkedin" 
+---
+```
